@@ -1,0 +1,2 @@
+# SegundoSemestreTecnicasDeProgramacao
+Professor Ariel
