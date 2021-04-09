@@ -1,0 +1,43 @@
+[fabinho@manjaro0920 git]$ git status
+On branch fernanda
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dia _1
+
+nothing added to commit but untracked files present (use "git add" to track)
+[fabinho@manjaro0920 git]$ git branch master
+fatal: A branch named 'master' already exists.
+[fabinho@manjaro0920 git]$ git checkout master
+Switched to branch 'master'
+[fabinho@manjaro0920 git]$ git branch
+  fabio
+  fernanda
+* master
+[fabinho@manjaro0920 git]$ git merge fabio
+Updating cc0329d..23ee87d
+Fast-forward
+ demo.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[fabinho@manjaro0920 git]$ git merge fernanda
+Auto-merging demo.txt
+CONFLICT (content): Merge conflict in demo.txt
+Automatic merge failed; fix conflicts and then commit the result.
+[fabinho@manjaro0920 git]$ git checkout fernanda
+demo.txt: needs merge
+error: you need to resolve your current index first
+[fabinho@manjaro0920 git]$ git add demo.txt
+[fabinho@manjaro0920 git]$ git commit -m "modificado pela fernanda de branch"
+[master c202abc] modificado pela fernanda de branch
+[fabinho@manjaro0920 git]$ git checkout master
+Already on 'master'
+[fabinho@manjaro0920 git]$ git checkout fabio
+Switched to branch 'fabio'
+[fabinho@manjaro0920 git]$ git branch -d fabio
+error: Cannot delete branch 'fabio' checked out at '/hd500/Faculdade/semestre_2/TDP/git'
+[fabinho@manjaro0920 git]$ git checkout master
+Switched to branch 'master'
+[fabinho@manjaro0920 git]$ git branch -d fabio
+Deleted branch fabio (was 23ee87d).
+[fabinho@manjaro0920 git]$ git branch -d fernanda
+Deleted branch fernanda (was afcc9ac).
+[fabinho@manjaro0920 git]$ 

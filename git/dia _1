@@ -1,0 +1,255 @@
+[fabinho@manjaro0920 git]$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /hd500/Faculdade/semestre_2/TDP/git/.git/
+[fabinho@manjaro0920 git]$ mousepad demo.txt
+git add demo.txt
+[fabinho@manjaro0920 git]$ git add demo.txt
+[fabinho@manjaro0920 git]$ git commit -m "adicionei um novo texto no meu documento"
+[master (root-commit) ae94f04] adicionei um novo texto no meu documento
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo.txt
+[fabinho@manjaro0920 git]$ git log
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4 (HEAD -> master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+[fabinho@manjaro0920 git]$ git add demo.txt 
+[fabinho@manjaro0920 git]$ git commit -m "adicionei um novo texto"
+[master a925ea5] adicionei um novo texto
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[fabinho@manjaro0920 git]$ git status
+On branch master
+nothing to commit, working tree clean
+[fabinho@manjaro0920 git]$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[fabinho@manjaro0920 git]$ git add demo.txt 
+[fabinho@manjaro0920 git]$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   demo.txt
+
+[fabinho@manjaro0920 git]$ git commit -m "adicionei um novo texto"
+[master cc0329d] adicionei um novo texto
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[fabinho@manjaro0920 git]$ git log
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (HEAD -> master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+[fabinho@manjaro0920 git]$ git branch fabio
+[fabinho@manjaro0920 git]$ git branch
+  fabio
+* master
+[fabinho@manjaro0920 git]$ git checkout fabio
+Switched to branch 'fabio'
+[fabinho@manjaro0920 git]$ git branch
+* fabio
+  master
+[fabinho@manjaro0920 git]$ mousepad demo.txt
+[fabinho@manjaro0920 git]$ git add demo.txt
+[fabinho@manjaro0920 git]$ git commit -m "mudanca de branch"
+[fabio 23ee87d] mudanca de branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[fabinho@manjaro0920 git]$ git checkout master
+Switched to branch 'master'
+[fabinho@manjaro0920 git]$ git status
+On branch master
+nothing to commit, working tree clean
+[fabinho@manjaro0920 git]$ git checkout fabio
+Switched to branch 'fabio'
+[fabinho@manjaro0920 git]$ git checkout master
+Switched to branch 'master'
+[fabinho@manjaro0920 git]$ git branch fernanda
+[fabinho@manjaro0920 git]$ git branch fernanda
+fatal: A branch named 'fernanda' already exists.
+[fabinho@manjaro0920 git]$ git branch 
+  fabio
+  fernanda
+* master
+[fabinho@manjaro0920 git]$ git checkout fernanda
+Switched to branch 'fernanda'
+[fabinho@manjaro0920 git]$ git add demo.txt
+[fabinho@manjaro0920 git]$ git commit -m "modificado pela fernanda de branch"
+[fernanda afcc9ac] modificado pela fernanda de branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[fabinho@manjaro0920 git]$ git log
+commit afcc9ac6b16adc258a8b606a4acfcc8b9261a441 (HEAD -> fernanda)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 11:01:52 2021 -0300
+
+    modificado pela fernanda de branch
+
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+(END)
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+...skipping...
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+...skipping...
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+(END)
+commit cc0329d5bb1b7017fb57f9413ff2054ff3c130ec (master)
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:36:11 2021 -0300
+
+    adicionei um novo texto
+
+commit a925ea54d6248f6e5b056ba6f662cc78452f483c
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 10:29:05 2021 -0300
+
+    adicionei um novo texto
+
+commit ae94f04d6e2c853b6d457257ffefff1ec734bef4
+Author: fabio <espynho23@gmail.com>
+Date:   Fri Feb 26 09:56:15 2021 -0300
+
+    adicionei um novo texto no meu documento
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
