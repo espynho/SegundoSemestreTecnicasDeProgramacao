@@ -19,3 +19,6 @@ let operacoes = {
     }
 }
 
+module.exports = operacoes;
+
+
