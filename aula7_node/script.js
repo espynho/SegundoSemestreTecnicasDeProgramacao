@@ -36,3 +36,6 @@ app.get('/logout', (requisicao, resposta) => {
 app.listen(process.env.port || 3000);
 console.log("Web server em execução.")
 
+// para funcionar é preciso instalat alguns frameworks
+// npm install jade
+// npm install express --save
